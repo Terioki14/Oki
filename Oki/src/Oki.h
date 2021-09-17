@@ -3,7 +3,7 @@
 // For use by Oki applications
 
 #include "Oki/Application.h"
-#include <stdio.h>
+#include "Oki/Log.h"
 
 // ---Entry Point----------------------
 #include "Oki/EntryPoint.h"

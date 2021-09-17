@@ -5,7 +5,12 @@
 extern Oki::Application* Oki::createApplication();
 
 int main(int argc, char** argv) {
-	printf("Oki Engine\n");
+	
+	Oki::Log::init();
+	OKI_CORE_WARN("Initialized Log!");
+	int a = 5;
+	OKI_INFO("Hello! Var={0}", a);
+
 	auto app = Oki::createApplication();
 	app->run();
 	delete app;
