@@ -3,16 +3,19 @@
 class Sandbox : public Oki::Application
 {
 public:
-	Sandbox() {
+	Sandbox() 
+	{
 
 	}
 
-	~Sandbox() {
+	~Sandbox() 
+	{
 
 	}
 
 };
 
-Oki::Application* Oki::createApplication() {
+Oki::Application* Oki::createApplication() 
+{
 	return new Sandbox;
 }

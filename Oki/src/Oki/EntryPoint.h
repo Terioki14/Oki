@@ -4,8 +4,8 @@
 
 extern Oki::Application* Oki::createApplication();
 
-int main(int argc, char** argv) {
-	
+int main(int argc, char** argv) 
+{
 	Oki::Log::init();
 	OKI_CORE_WARN("Initialized Log!");
 	int a = 5;
