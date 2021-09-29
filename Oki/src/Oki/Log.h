@@ -4,8 +4,7 @@
 #include "spdlog/spdlog.h"
 #include "spdlog/fmt/ostr.h"
 
-namespace Oki 
-{
+namespace Oki {
 
 	class OKI_API Log
 	{

@@ -37,6 +37,12 @@
     <ClInclude Include="src\Oki\Events\MouseEvent.h">
       <Filter>Oki\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Oki\Layer.h">
+      <Filter>Oki</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Oki\LayerStack.h">
+      <Filter>Oki</Filter>
+    </ClInclude>
     <ClInclude Include="src\Oki\Log.h">
       <Filter>Oki</Filter>
     </ClInclude>
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Oki\Application.cpp">
+      <Filter>Oki</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Oki\Layer.cpp">
+      <Filter>Oki</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Oki\LayerStack.cpp">
       <Filter>Oki</Filter>
     </ClCompile>
     <ClCompile Include="src\Oki\Log.cpp">

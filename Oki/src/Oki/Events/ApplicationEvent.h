@@ -28,6 +28,7 @@ namespace Oki {
 
 	class OKI_API WindowCloseEvent : public Event
 	{
+	public:
 		WindowCloseEvent() {}
 
 		EVENT_CLASS_TYPE(WindowClose)
@@ -36,6 +37,7 @@ namespace Oki {
 
 	class OKI_API AppTickEvent : public Event
 	{
+	public:
 		AppTickEvent() {}
 
 		EVENT_CLASS_TYPE(AppTick)
@@ -44,6 +46,7 @@ namespace Oki {
 
 	class OKI_API AppUpdateEvent : public Event
 	{
+	public:
 		AppUpdateEvent() {}
 
 		EVENT_CLASS_TYPE(AppUpdate)
@@ -52,6 +55,7 @@ namespace Oki {
 
 	class OKI_API AppRenderEvent : public Event
 	{
+	public:
 		AppRenderEvent() {}
 
 		EVENT_CLASS_TYPE(AppRender)

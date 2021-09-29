@@ -4,7 +4,7 @@
 
 #include <GLFW/glfw3.h>
 
-namespace Oki{
+namespace Oki {
 
 	class WindowsWindow : public Window
 	{

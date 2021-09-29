@@ -32,8 +32,9 @@ namespace Oki {
 
 	class OKI_API Event
 	{
-		friend class EventDispatcher;
 	public:
+		bool handled = false;
+
 		virtual EventType getEventType() const = 0;
 		virtual const char* getName() const = 0;
 		virtual int getCategoryFlags() const = 0;
@@ -43,8 +44,6 @@ namespace Oki {
 		{
 			return getCategoryFlags() & category;
 		}
-	protected:
-		bool m_Handled = false;
 	};
 
 #define EVENT_CLASS_TYPE(type) static EventType getStaticType() { return EventType::##type; }\
@@ -66,7 +65,7 @@ namespace Oki {
 		{
 			if (m_Event.getEventType() == T::getStaticType())
 			{
-				m_Event.m_Handled = func(*(T*)&m_Event);
+				m_Event.handled = func(*(T*)&m_Event);
 				return true;
 			}
 			return false;
