@@ -4,3 +4,6 @@
 [submodule "Oki/vendor/GLFW"]
 	path = Oki/vendor/GLFW
 	url = https://github.com/TheCherno/GLFW
+[submodule "Oki/vendor/imgui"]
+	path = Oki/vendor/imgui
+	url = https://github.com/TheCherno/imgui

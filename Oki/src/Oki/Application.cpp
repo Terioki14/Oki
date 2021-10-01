@@ -5,12 +5,15 @@
 
 namespace Oki {
 
-#define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
+	Application* Application::s_Instance = nullptr;
 
 	Application::Application() 
 	{
+		OKI_CORE_ASSERT(!s_Instance, "Application already exists!");
+		s_Instance = this;
+
 		m_Window = std::unique_ptr<Window>(Window::create());
-		m_Window->setEventCallback(BIND_EVENT_FN(onEvent));
+		m_Window->setEventCallback(OKI_BIND_EVENT_FN(Application::onEvent));
 	}
 
 	Application::~Application() 
@@ -20,17 +23,19 @@ namespace Oki {
 	void Application::pushLayer(Layer* layer)
 	{
 		m_LayerStack.pushLayer(layer);
+		layer->onAttach();
 	}
 
 	void Application::pushOverlay(Layer* overlay)
 	{
 		m_LayerStack.pushLayer(overlay);
+		overlay->onAttach();
 	}
 
 	void Application::onEvent(Event& e)
 	{
 		EventDispatcher dispatcher(e);
-		dispatcher.dispatch<WindowCloseEvent>(BIND_EVENT_FN(onWindowClose));
+		dispatcher.dispatch<WindowCloseEvent>(OKI_BIND_EVENT_FN(Application::onWindowClose));
 
 		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin(); )
 		{

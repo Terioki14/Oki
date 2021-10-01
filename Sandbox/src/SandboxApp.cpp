@@ -25,13 +25,13 @@ public:
 	Sandbox() 
 	{
 		pushLayer(new ExampleLayer);
+		pushOverlay(new Oki::ImGuiLayer());
 	}
 
 	~Sandbox() 
 	{
 
 	}
-
 };
 
 Oki::Application* Oki::createApplication() 
