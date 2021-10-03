@@ -15,7 +15,7 @@ public:
 
 	void onEvent(Oki::Event& event) override
 	{
-		OKI_TRACE("{0}", event);
+		//OKI_TRACE("{0}", event);
 	}
 };
 

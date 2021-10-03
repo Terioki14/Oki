@@ -21,6 +21,8 @@ namespace Oki {
 		inline void setEventCallback(const EventCallbackFn& callback) override { m_Data.eventCallback = callback; }
 		void setVSync(bool enabled) override;
 		bool isVSync() const override;
+
+		inline virtual void* getNativeWindow() const { return m_Window; };
 	private:
 		virtual void init(const WindowProps& props);
 		virtual void shutdown();

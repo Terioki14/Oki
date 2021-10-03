@@ -3,6 +3,8 @@
 
 #include <glad/glad.h>
 
+#include "Input.h"
+
 namespace Oki {
 
 	Application* Application::s_Instance = nullptr;

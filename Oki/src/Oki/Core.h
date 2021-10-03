@@ -10,6 +10,10 @@
 	#error Oki only supports Windows!
 #endif
 
+#ifdef OKI_DEBUG
+	#define OKI_ENABLE_ASSERTS
+#endif
+
 #ifdef OKI_ENABLE_ASSERTS
 	#define OKI_ASSERT(x, ...) {if(!(x)) {OKI_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak();}}
 	#define OKI_CORE_ASSERT(x, ...) {if(!(x)) {OKI_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak();}}
